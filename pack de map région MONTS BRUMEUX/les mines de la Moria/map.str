@@ -1,0 +1,27 @@
+SCRIPT:MoriaIntro
+"Since Moria has been left, many creeps have their home here now. Beware for them...\n\n The Dwarves didn't took all their treasures with them, untold secrets are said to be still hidden in the Mines."
+End
+
+SCRIPT:MoriaHint
+"There's a Balrog in Khazad-Dum. Kill him for 10000 gold!"
+End
+
+SCRIPT:BalrogDefeatedByPlayer4
+"The Player in the Great Hall has defeated the Balrog."
+End
+
+SCRIPT:BalrogDefeatedByPlayer1
+"The player in the northwestern cave has defeated the Balrog."
+End
+
+SCRIPT:BalrogDefeatedByPlayer2
+"The player in the western cave has defeated the Balrog."
+End
+
+SCRIPT:BalrogDefeatedByPlayer3
+"The player in the north-eastern hall has defeated the Balrog."
+End
+
+SCRIPT:BalrogDefeatedByPlayer5
+"The player in the hall has defeated the Balrog."
+END
