@@ -23,13 +23,6 @@ Object MBMMWallC
 	KindOf              = PRELOAD STRUCTURE IMMOBILE CHUNK_VENDOR  NOT_AUTOACQUIRABLE SELECTABLE  WALK_ON_TOP_OF_WALL IGNORE_FOR_VICTORY NEVER_CULL_FOR_MP DONT_HIDE_IF_FOGGED
 	RemoveModule MakeTheFreeTreb
 	CommandSet				= GenericMinasMorgulBuyNewTrebCommandSetNew
-	ReplaceModule ModueTag_TrebCommandSet
-		Behavior = CommandSetUpgrade ModueTag_TrebCommandSetNew
-			TriggeredBy				= Upgrade_TrebuchetTurret
-			ConflictsWith			= Upgrade_HasWallTrebuchetNew 
-			CommandSet				= GenericMinasMorgulBuyNewTrebCommandSetNew
-		End
-	End
 
 	AddModule
 		Behavior = ObjectCreationUpgrade ModuleTag_MordorTreb2
@@ -39,6 +32,37 @@ Object MBMMWallC
 			ThingToSpawn			= MordorMinasMorgulCatapult
 			Offset					= X:100.0 Y:0.0 Z:125.0
 			FadeInTime				= 600
+		End
+	End
+
+	AddModule
+		Behavior = SlaveWatcherBehavior WatchTheTreb2
+			RemoveUpgrade			= Upgrade_HasWallTrebuchetNew				; when our slave dies, remove this upgrade, so we can get the upgrade again.
+		End
+	End
+
+	AddModule
+		Behavior = ProductionUpdate ProductionUpdateModuleTag2
+		End
+	End
+	AddModule
+		Behavior = GrantUpgradeCreate ModuleTag_ActLikeAnOldUpgrade2
+			UpgradeToGrant			= Upgrade_TrebuchetTurret
+			GiveOnBuildComplete		= Yes							; The ExemptStatus UnderConstruction hack doesn't work on foundation buildings.
+		End
+	End
+	AddModule
+		Behavior = CommandSetUpgrade ModueTag_TrebCommandSet2
+			TriggeredBy				= Upgrade_TrebuchetTurret
+			ConflictsWith			= Upgrade_HasWallTrebuchetNew 
+			CommandSet				= GenericMinasMorgulBuyNewTrebCommandSetNew
+		End
+	End
+	AddModule
+		Behavior = CommandSetUpgrade ModueTag_TrebSellCommandSet2
+			TriggeredBy				= Upgrade_HasWallTrebuchetNew Upgrade_TrebuchetTurret
+			CommandSet				= EmptyCommandSet
+			RequiresAllTriggers		= Yes
 		End
 	End
 END

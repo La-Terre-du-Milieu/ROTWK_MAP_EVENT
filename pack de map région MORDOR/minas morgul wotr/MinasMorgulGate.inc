@@ -22,4 +22,5 @@ END
 
 CommandSet CastleGateCommandSet_NoSellNew
 	1 = Command_ToggleGate
+	2 = Command_StartSelfRepair
 End
