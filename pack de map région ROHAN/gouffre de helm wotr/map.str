@@ -1,0 +1,15 @@
+Map:gouffredehelmwotr
+"Le Gouffre de Helm"
+END
+
+Map:gouffredehelmwotr/Desc
+"Le Gouffre de Helm désignait la passe qui s'ouvrait au nord des Montagnes Blanches sous le mont Thrihyrne ; elle était située dans l'Ouestfolde à proximité de la Brèche du Rohan."
+END
+
+CONTROLBAR:HornOfHammerhand
+"Le cor de Helm"
+END
+
+CONTROLBAR:ToolTipHornOfHammerhand
+"Le cor de Helm mes amis, va retentir dans le gouffre une dernière fois ! Voici venue l’heure de tirer l’épée ensemble ! Cruauté réveille-toi ! Qu’importe le courroux, qu’importe la ruine et que l’aube soit rouge ! Pour Eorlingas !"
+END
